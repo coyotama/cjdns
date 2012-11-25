@@ -240,6 +240,15 @@ target_link_libraries(benc2json
     cjdmemory
     cjdio
 )
+add_executable(udptest
+    udptest.c
+)
+target_link_libraries(udptest
+    cjdmemory
+    cjdns-crypto-random
+    ${LIBEVENT_LIBRARIES}
+    util
+)
 
 #INSTALL(TARGETS cjdroute RUNTIME DESTINATION bin)
 
